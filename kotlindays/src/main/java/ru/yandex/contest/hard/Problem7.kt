@@ -1,4 +1,4 @@
-package ru.yandex.contest.hard
+//package ru.yandex.contest.hard
 
 import java.io.BufferedReader
 import java.io.InputStream

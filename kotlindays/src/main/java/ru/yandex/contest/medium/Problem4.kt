@@ -1,4 +1,4 @@
-package ru.yandex.contest.medium
+//package ru.yandex.contest.medium
 
 import java.io.BufferedReader
 import java.io.InputStream

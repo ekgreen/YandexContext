@@ -2,6 +2,7 @@ package ru.yandex.contest.easy
 
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
+import problem3
 
 internal class Problem3KtTest{
 
