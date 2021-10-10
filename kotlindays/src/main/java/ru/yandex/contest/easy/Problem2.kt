@@ -11,18 +11,21 @@ fun main(){
     val n: Int = reader.nextInt()
     val a = intArrayOf(0, 1, 1)
 
-    for (i in 0 until n-2) {
-        val sum = a[0] + a[1] + a[2]
-        a[0] = a[1]
-        a[1] = a[2]
-        a[2] = sum
-    }
+    if(n < 3){
+        println(a[n])
+    } else {
+        for (i in 0 until n - 2) {
+            val sum = a[0] + a[1] + a[2]
+            a[0] = a[1]
+            a[1] = a[2]
+            a[2] = sum
+        }
 
-    print(a[2])
+        print(a[2])
+    }
 }
 
 fun problem2(){
-    TODO()
 }
 
 private class Problem2FastInputReader(inputStream: InputStream = System.`in`) {

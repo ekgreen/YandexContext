@@ -1,4 +1,4 @@
-package ru.yandex.contest.easy
+//package ru.yandex.contest.easy
 
 import java.io.BufferedReader
 import java.io.InputStream
@@ -14,8 +14,6 @@ fun main(){
 }
 
 fun problem1(array: List<Int>): Int {
-    val n = array.size
-
     var sum = 0
     for (i in array.indices) {
         sum += array[i]
