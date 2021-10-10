@@ -8,7 +8,7 @@ import java.util.*
 fun main(){
     val reader: Problem8FastInputReader = Problem8FastInputReader()
 
-    var array = reader.nextLine().removeSurrounding("[", "]").split(",").map { it.toInt() }.toMutableList()
+    var array = reader.nextLine().removeSurrounding("[", "]").split(",").map { it.trim().toInt() }.toMutableList()
 
     println(problem8(array))
 }

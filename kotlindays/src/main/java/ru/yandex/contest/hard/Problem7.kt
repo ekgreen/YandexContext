@@ -15,24 +15,6 @@ fun main(){
     println(editDistance(a, b))
 }
 
-/**
- * Вычисление минимального расстояния между строками
- *
- * A - первая строка
- * B - вторая строка
- *
- * insertion = вставка в первую строку A    = +1
- * deletion  = вставка во вторую строку B   = +1
- * match     = A[i] == B[j]                 = +0
- * mismatch  = A[i] != B[j]                 = +1
- *
- * Example comparing:
- *
- * A[1....n] = EDITING
- * B[1....m] = DISTANCE
- *
- * @see <a href="notes/edit.distance.algorighm.png"></a>
- */
 fun editDistance(A: CharArray, B: CharArray): Int {
     return distanceArray(A,B)[A.size][B.size]
 }
