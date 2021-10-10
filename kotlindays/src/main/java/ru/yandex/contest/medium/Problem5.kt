@@ -8,7 +8,7 @@ import java.util.ArrayList
 import java.util.Arrays
 
 fun main() {
-    val reader: Problem7FastInputReader = Problem7FastInputReader()
+    val reader: Problem5FastInputReader = Problem5FastInputReader()
 
     val line: String = reader.nextLine().removeSurrounding("[", "]")
 
@@ -77,4 +77,3 @@ private class Problem5FastInputReader(inputStream: InputStream = System.`in`) {
         return reader.readLine()
     }
 }
-
