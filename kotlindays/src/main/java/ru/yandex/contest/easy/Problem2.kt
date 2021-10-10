@@ -8,9 +8,17 @@ import java.util.*
 fun main(){
     val reader: Problem2FastInputReader = Problem2FastInputReader()
 
-    val N: Int = reader.nextInt()
+    val n: Int = reader.nextInt()
+    val a = intArrayOf(0, 1, 1)
 
-    println(problem2())
+    for (i in 0 until n-2) {
+        val sum = a[0] + a[1] + a[2]
+        a[0] = a[1]
+        a[1] = a[2]
+        a[2] = sum
+    }
+
+    print(a[2])
 }
 
 fun problem2(){
