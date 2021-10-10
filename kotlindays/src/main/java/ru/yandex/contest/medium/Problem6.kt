@@ -3,7 +3,6 @@
 import java.io.BufferedReader
 import java.io.InputStream
 import java.io.InputStreamReader
-import java.math.BigInteger
 import java.util.*
 
 fun main() {
@@ -13,16 +12,12 @@ fun main() {
     println(numberOfPaths(list[0], list[1]))
 }
 
-fun numberOfPaths(n: Int, m: Int): BigInteger {
-    if(n == 1 && m == 1)
-        return BigInteger.ZERO
-
-    var path = BigInteger.ONE
-    val unit = BigInteger.ONE
+fun numberOfPaths(n: Int, m: Int): Long {
+    var path = 1L
 
     for (i in n until m + n - 1) {
-        path *= i.toBigInteger()
-        path /= i.toBigInteger() - n.toBigInteger() + unit
+        path *= i.toLong()
+        path /= i.toLong() - n.toLong() + 1L
     }
 
     return path
