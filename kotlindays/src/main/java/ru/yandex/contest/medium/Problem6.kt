@@ -7,14 +7,33 @@ import java.util.*
 
 fun main(){
     val reader: Problem6FastInputReader = Problem6FastInputReader()
+    var list = reader.nextLine().split("x").map { it.toInt() }.toList()
 
-    val N: Int = reader.nextInt()
-
-    println(problem6())
+    //println(uniquePaths(list[0], list[1]))
+    println(numberOfPaths(list[0], list[1]))
 }
 
-fun problem6(){
-    TODO()
+fun numberOfPaths(n: Int, m: Int): ULong {
+    var path = 1UL
+    for (i in n until m + n - 1) {
+        path *= i.toULong()
+        path /= i.toULong() - n.toULong() + 1UL
+    }
+    return path
+}
+ fun uniquePathsUtil(m: Int, n: Int, dp: Array<LongArray>): Long {
+    if (m == 1 || n == 1) return 1
+
+     if (dp[m][n] != 0L)
+         return dp[m][n]
+     else
+         return uniquePathsUtil(m - 1, n, dp) + uniquePathsUtil(m, n - 1, dp)
+}
+
+ fun uniquePaths(m: Int, n: Int): Long {
+    val dp = Array(m + 1) { LongArray(n + 1) }
+
+    return uniquePathsUtil(m, n, dp)
 }
 
 internal class Problem6FastInputReader(inputStream: InputStream = System.`in`) {
